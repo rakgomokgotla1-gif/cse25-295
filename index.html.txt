@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
+<title>My first GitHub Page </title>
+
+</head>
+<body>
+<header>
+<hi>Welcome to My Website!</h1>
+</header>
+
+<main>
+<p>This is a simple webpage hosted on GitHub Page.</p>
+<p>Here's a picture of a cute cat:</p>
+<imag src="https://placeKitten.com/200/300"alt="A cute Kitten">
+
+<p.Visit <a href="https://github.com">GitHub</a>to learn more about more about coding.</p>
+</main>
+
+<footer>
+<p>copy;2025 Your Name</p>
+</footer>
+</body>
+</html>
