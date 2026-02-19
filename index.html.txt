@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<Head>
+<title>My Profile</title>
+</head>
+<body"backgorund-colour:red;"> 
+<h1>Your Name</h1>
+<h3>Student / Beginner Developer</h3>
+ 
+<h2>About Me</h2>
+<p>
+Write a short paragraph about yourself,
+your interests, or what you are studying.
+</p>
+
+<h2>My Hobbies<h2>
+</ul>
+<li>Football</li>
+<li>Coding</li>
+<li>Music</li>
+</ul>
+
+<h2>My Photo</h2>
+<img src="photo.jpg" width="200" alt="My photo">
+
+<h2>Contact Me</h2>
+<a href="mailto:example@email.com">Send Email</a>
+
+</body>
+</html>
