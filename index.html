@@ -73,6 +73,67 @@ a.contact-link {
 }
 
 a.contact-link:hover {
-    text-de
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#photo">Photo</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<h1>Your Name</h1>
+<h3>Student / Beginner Developer</h3>
+
+<h2 id="about">About Me</h2>
+<p>
+Write a short paragraph about yourself, your interests, or what you are studying.
+</p>
+
+<h2 id="hobbies">My Hobbies</h2>
+<ul>
+<li>Football</li>
+<li>Coding</li>
+<li>Music</li>
+</ul>
+
+<h2 id="photo">My Photo</h2>
+<img src="photo.jpg" width="200" alt="My photo">
+
+<h2 id="contact">Contact Me</h2>
+<a class="contact-link" href="mailto:example@email.com">Send Email</a>
+
+</div>
+
+</body>
+</html>
+
+
 
 
