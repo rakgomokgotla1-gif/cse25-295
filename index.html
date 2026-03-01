@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Profile</title>
+<title>My Profile - About</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* Global page style */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,19 +12,14 @@ body {
     color: #333;
 }
 
-/* Navigation Bar */
 nav {
     background-color: #0056b3;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
-/* Nav links container */
 .nav-links {
     display: flex;
 }
@@ -37,11 +31,6 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Hamburger icon */
 .hamburger {
     display: none;
     font-size: 24px;
@@ -49,7 +38,6 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* Main container */
 .container {
     max-width: 800px;
     margin: 40px auto;
@@ -59,34 +47,6 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Subtitles */
-h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-    margin-top: 30px;
-}
-
-/* Photo container */
-.photo-container {
-    position: relative;
-    display: inline-block;
-}
-
-.photo-container img:first-child {
-    width: 200px;
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.photo-container .logo {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 50px;
-    opacity: 0.8;
-}
-
-/* Responsive Design */
 @media screen and (max-width: 600px) {
 
     .nav-links {
@@ -100,16 +60,16 @@ h2 {
         padding: 10px;
     }
 
-    .nav-links a {
-        margin: 10px 0;
+    .nav-links.active {
+        display: flex;
     }
 
     .hamburger {
         display: block;
     }
 
-    .nav-links.active {
-        display: flex;
+    .nav-links a {
+        margin: 10px 0;
     }
 }
 </style>
@@ -117,47 +77,33 @@ h2 {
 
 <body>
 
-<!-- Navigation Bar -->
 <nav>
     <div style="color:white; font-weight:bold;">My Profile</div>
 
     <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#photo">Photo</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
     </div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-        ☰
-    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 </nav>
 
 <div class="container">
+<h1>About Me</h1>
 
-<h1>Your Name</h1>
-<h3>Student / Beginner Developer</h3>
-
-<h2 id="about">About Me</h2>
 <p>
-Write a short paragraph about yourself, your interests, or what you are studying.
+I am a student and beginner developer passionate about coding, technology,
+and continuous learning. I enjoy building simple web applications and
+improving my programming skills daily.
 </p>
 
-<h2 id="hobbies">My Hobbies</h2>
+<h2>Skills</h2>
 <ul>
-<li>Football</li>
-<li>Coding</li>
-<li>Music</li>
+<li>HTML & CSS</li>
+<li>Basic JavaScript</li>
+<li>Java Programming</li>
 </ul>
-
-<h2 id="photo">My Photo</h2>
-<div class="photo-container">
-    <img src="photo.jpg" alt="My Photo">
-    <img src="bac_logo.png" alt="BAC Logo" class="logo">
-</div>
-
-<h2 id="contact">Contact Me</h2>
-<a href="mailto:example@email.com">Send Email</a>
 
 </div>
 
@@ -169,6 +115,7 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 
 
