@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>My Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 /* Global page style */
@@ -15,22 +16,37 @@ body {
 /* Navigation Bar */
 nav {
     background-color: #0056b3;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
+/* Nav links container */
+.nav-links {
+    display: flex;
+}
+
 nav a {
     color: white;
-    margin: 0 15px;
+    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Main container */
@@ -43,12 +59,6 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Header */
-h1 {
-    margin-top: 0;
-    color: #222;
-}
-
 /* Subtitles */
 h2 {
     border-bottom: 2px solid #ddd;
@@ -56,72 +66,71 @@ h2 {
     margin-top: 30px;
 }
 
-/* Lists */
-ul {
-    padding-left: 20px;
-}
-
-/* Photo container for overlay */
+/* Photo container */
 .photo-container {
     position: relative;
     display: inline-block;
 }
 
-.photo-container img {
+.photo-container img:first-child {
+    width: 200px;
+    max-width: 100%;
     border-radius: 8px;
 }
 
-/* BAC logo overlay */
 .photo-container .logo {
     position: absolute;
-    bottom: 10px;   /* adjust position */
+    bottom: 10px;
     right: 10px;
-    width: 50px;    /* logo size */
-    height: auto;
-    opacity: 0.8;   /* slightly transparent */
+    width: 50px;
+    opacity: 0.8;
 }
 
-/* Contact link */
-a.contact-link {
-    color: #0056b3;
-}
+/* Responsive Design */
+@media screen and (max-width: 600px) {
 
-a.contact-link:hover {
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media screen and (max-width: 500px) {
-    .container {
-        padding: 15px;
-        margin: 10px;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0056b3;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
     }
 
-    .photo-container img {
-        width: 100%;
+    .nav-links a {
+        margin: 10px 0;
     }
 
-    nav a {
+    .hamburger {
         display: block;
-        margin: 5px 0;
     }
 
-    .photo-container .logo {
-        width: 30px; /* smaller logo on small screens */
+    .nav-links.active {
+        display: flex;
     }
 }
 </style>
-
 </head>
 
 <body>
 
 <!-- Navigation Bar -->
 <nav>
-  <a href="#about">About Me</a>
-  <a href="#hobbies">Hobbies</a>
-  <a href="#photo">Photo</a>
-  <a href="#contact">Contact</a>
+    <div style="color:white; font-weight:bold;">My Profile</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#photo">Photo</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
 </nav>
 
 <div class="container">
@@ -143,14 +152,20 @@ Write a short paragraph about yourself, your interests, or what you are studying
 
 <h2 id="photo">My Photo</h2>
 <div class="photo-container">
-    <img src="photo.jpg" alt="My Photo" width="200">
+    <img src="photo.jpg" alt="My Photo">
     <img src="bac_logo.png" alt="BAC Logo" class="logo">
 </div>
 
 <h2 id="contact">Contact Me</h2>
-<a class="contact-link" href="mailto:example@email.com">Send Email</a>
+<a href="mailto:example@email.com">Send Email</a>
 
 </div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
