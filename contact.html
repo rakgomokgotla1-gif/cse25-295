@@ -1,41 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Contact Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS Link -->
+    <title>Contact Me</title>
+    
+    <!-- Your custom CSS (load after Bootstrap to override) -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Bootstrap 5.3.8 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+          crossorigin="anonymous">
 </head>
-
 <body>
 
-<header>
-    <h1>Contact Me</h1>
+    <!-- Responsive Bootstrap Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">My Website</a>
+                
+                <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <!-- Main content -->
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">Get In Touch</h2>
+                <p class="lead mb-4">If you'd like to contact me, feel free to send an email:</p>
+                
+                <a href="mailto:example@example.com" 
+                   class="btn btn-success btn-lg px-5 py-3">
+                    example@example.com
+                </a>
+            </div>
+        </div>
+    </main>
 
-<main>
-    <h2>Get In Touch</h2>
-    <p>If you'd like to contact me, email me below:</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Your Name</p>
+        </div>
+    </footer>
 
-    <p>
-        <a href="mailto:example@example.com">
-            example@example.com
-        </a>
-    </p>
-</main>
-
-<footer>
-    <p>&copy; 2026 Your Name</p>
-</footer>
-
+    <!-- Bootstrap 5.3.8 JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous"></script>
 </body>
 </html>
